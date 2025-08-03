@@ -1,0 +1,10 @@
+streamlit
+python-dotenv
+pandas
+langchain
+langchain-groq
+langchain-community
+chromadb
+sentence-transformers
+pdfminer.six
+pypdf
