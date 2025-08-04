@@ -8,3 +8,4 @@ chromadb
 sentence-transformers
 pdfminer.six
 pypdf
+pysqlite3-binary
