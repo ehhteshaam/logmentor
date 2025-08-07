@@ -1,7 +1,7 @@
 import re
 
 def structure_logs(raw_text):
-    pattern = re.compile(r"^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}),\d+ \[(.*?)\] (.*)")
+    pattern = re.compile(r"^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})(?:,\d+)?\s+\[?(\w+)\]?\s+(.*)")
     structured = []
     for line in raw_text.splitlines():
         match = pattern.match(line)
@@ -12,6 +12,7 @@ def structure_logs(raw_text):
                 "message": match.group(3)
             })
     return structured
+
 
 def chunk_structured_logs(logs, chunk_size=10):
     chunks = []
