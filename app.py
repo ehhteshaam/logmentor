@@ -26,7 +26,8 @@ from utils import structure_logs, chunk_structured_logs
 
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.chains import RetrievalQA
+from langchain.chains import RetrievalQA
+
 from langchain_groq import ChatGroq
 from langchain_core.documents import Document
 
