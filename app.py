@@ -16,7 +16,6 @@
 # from langchain.embeddings import HuggingFaceEmbeddings
 # from langchain.chains import RetrievalQA
 # from langchain_groq import ChatGroq
-import sys
 import streamlit as st
 from dotenv import load_dotenv
 import os
@@ -27,9 +26,10 @@ from utils import structure_logs, chunk_structured_logs
 
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain.chains import RetrievalQA
+from langchain_community.chains import RetrievalQA
 from langchain_groq import ChatGroq
 from langchain_core.documents import Document
+
 
 # Load API key
 load_dotenv()
