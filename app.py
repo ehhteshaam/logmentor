@@ -1,19 +1,19 @@
-import sys
-import sqlite3
-
-sys.modules["sqlite3"] = sqlite3
-
 import streamlit as st
 from dotenv import load_dotenv
 import os
 import datetime
 import pandas as pd
+
+# Local utilities
 from utils import structure_logs, chunk_structured_logs
+
+# Modern LangChain imports (as of v0.3+)
 from langchain_core.documents import Document
-from langchain.vectorstores import Chroma
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.chains import RetrievalQA
+from langchain_community.vectorstores import Chroma
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain.chains.retrieval import RetrievalQA
 from langchain_groq import ChatGroq
+
 
 # Load API key
 load_dotenv()
